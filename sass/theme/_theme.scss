@@ -19,6 +19,83 @@ h3 {
 	font-weight: 700;
 }
 
+.bucks-row h2 {
+	text-align: center;
+	width: 100%;
+}
+
+.home-element {
+	margin-bottom: 20px;
+	padding: 10px 10px 10px 100px;
+	height: 120px;
+	background-size: 80px 80px;
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+
+.home-element.sustained-inquiry {
+	background-image: url(../imgs/sustained-inquiry.svg);
+}
+
+.home-element.authenticity {
+	background-image: url(../imgs/authenticity.svg);
+}
+
+.home-element.student-voice-choice {
+	background-image: url(../imgs/student-voice-choice.svg);
+}
+
+.home-element.reflection {
+	background-image: url(../imgs/reflection.svg);
+}
+
+.home-element.critique-revision {
+	background-image: url(../imgs/critique-revision.svg);
+}
+
+.home-element.public-product {
+	background-image: url(../imgs/public-product.svg);
+}
+
+.home-element.challenging-problem-or-question{
+	background-image: url(../imgs/challenging-problem-or-question.svg);
+}
+
+.home-element.align-to-standards{
+	background-image: url(../imgs/align-to-standards.svg);
+}
+
+.home-element.build-the-culture{
+	background-image: url(../imgs/build-the-culture.svg);
+}
+
+.home-element.manage-activities{
+	background-image: url(../imgs/manage-activities.svg);
+}
+
+.home-element.scaffold-student-learning{
+	background-image: url(../imgs/scaffold-student-learning.svg);
+}
+
+.home-element.assess-student-learning{
+	background-image: url(../imgs/assess-student-learning.svg);
+}
+
+.home-element.engage-coach{
+	background-image: url(../imgs/engage-coach.svg);
+}
+
+.home-element.design-plan{
+	background-image: url(../imgs/design-plan.svg);
+}
+
+.item-img {
+	height: 100px;
+	width: 100px;
+	background-color: blue;
+	display: inline-block;
+}
+
 /*home page*/
 
 .entry-header {

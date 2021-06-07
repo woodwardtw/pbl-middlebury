@@ -61,9 +61,10 @@ function pbl_design_elements(){
     foreach ($elements as $key => $element) {
         // code...
         $title = $element->post_title;
+        $slug = $element->post_name;
         $link = get_permalink($element->ID);
         $content = get_the_content('','',$element->ID);
-        $html .= "<h3><a href='{$link}'>{$title}</a></h3><div class='element-content'>{$content}</div>";
+        $html .= "<div class='home-element {$slug} '><h3><a href='{$link}'>{$title}</a></h3><div class='element-content'>{$content}</div></div>";
     }
     return $html;
 }
@@ -74,9 +75,10 @@ function pbl_teaching_practices(){
     foreach ($elements as $key => $element) {
         // code...
         $title = $element->post_title;
+        $slug = $element->post_name;
         $link = get_permalink($element->ID);
         $content = get_the_content('','',$element->ID);
-        $html .= "<h3><a href='{$link}'>{$title}</a></h3><div class='element-content'>{$content}</div>";
+        $html .= "<div class='home-element {$slug}'><h3><a href='{$link}'>{$title}</a></h3><div class='element-content'>{$content}</div></div>";
     }
     return $html;
 }
