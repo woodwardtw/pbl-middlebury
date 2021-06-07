@@ -19,7 +19,9 @@ defined( 'ABSPATH' ) || exit;
 	<?php //echo get_the_post_thumbnail( $post->ID, 'full' ); ?>
 
 	<div class="entry-content">
-	<?php echo pbl_topic_resources_repeater();?>
+		<div class="row topic-resources-row">
+			<?php echo pbl_topic_resources_repeater();?>
+		</div>
 		<?php
 		wp_link_pages(
 			array(

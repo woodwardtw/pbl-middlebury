@@ -88,29 +88,32 @@ function pbl_teaching_practices(){
 
 function pbl_topic_resources_repeater(){
     global $post;
-    $post_slug = $post->post_name;
+    $post_slug = $post->post_name;//get post slug to match either design or teaching practice taxonomy
     if(get_term_by('slug', $post_slug, 'Design elements')){
         $term_type = 'Design elements';
         $term_id = get_term_by('slug', $post_slug, 'Design elements')->term_id;
     }
     if(get_term_by('slug', $post_slug, 'Teaching practices')){
-        $term_type = 'Design practice';
+        $term_type = 'Teaching practices';
         $term_id = get_term_by('slug', $post_slug, 'Teaching practices')->term_id;
     }
    
     $html = '';
     if( have_rows('display_categories') ):
         // Loop through rows.
+        $html = '';
         while( have_rows('display_categories') ) : the_row();
-            $html = '';
+            
             // Load sub field value.
             $section_title = get_sub_field('title');
             $cats = get_sub_field('category');
             // Do something...
-
+            $count = count(get_field("display_categories"));
+            $div_class = bs_div_maker($count);
+            $html .= "<div class='{$div_class}'><h2>{$section_title}</h2>";
             // WP QUERY LOOP
              $args = array(
-                  'posts_per_page' => 20,
+                  'posts_per_page' => 15,
                   'post_type'   => 'resource', 
                   'post_status' => 'publish', 
                   'nopaging' => false,
@@ -132,13 +135,16 @@ function pbl_topic_resources_repeater(){
                     if( $the_query->have_posts() ): 
                       while ( $the_query->have_posts() ) : $the_query->the_post();
                        //DO YOUR THING
+                        $id = get_the_id();
                         $title = get_the_title();
-                        $html .= "<div><h3>{$title}</h3></div>";
+                        $link = get_field('link', $id);
+                        $description = get_field('description', $id);
+                        $html .= "<div><h3><a href='{$link}'>{$title}</a></h3>{$description}</div>";
                          endwhile;
                   endif;
                 wp_reset_query();  // Restore global post data stomped by the_post().
                     
-
+                $html .= '</div>';
         // End loop.
         endwhile;
         return $html;
@@ -148,7 +154,17 @@ function pbl_topic_resources_repeater(){
         endif;
     }
 
-
+function bs_div_maker($count){
+    if($count === 1){
+        return 'col-md-12';
+    }
+    if($count === 2){
+        return 'col-md-6';
+    }
+    if($count > 2){
+        return 'col-md-4';
+    }
+}
 
 
 

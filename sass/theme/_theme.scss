@@ -5,6 +5,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Domine', serif;
 }
 
+h3 {
+	font-size: 1.2em;
+}
+
 .navbar-brand {
 	font-family: 'Domine', serif;
 	font-size: 1.2em;
@@ -27,6 +31,6 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 20px
 }
 
-.blocks-row, .bucks-row {
+.blocks-row, .bucks-row, .topic-resources-row {
 	margin-top: 90px;
 }
