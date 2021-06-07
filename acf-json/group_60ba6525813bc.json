@@ -42,8 +42,8 @@
                 },
                 {
                     "key": "field_60ba65758181e",
-                    "label": "",
-                    "name": "",
+                    "label": "Category",
+                    "name": "category",
                     "type": "taxonomy",
                     "instructions": "Select the categories for the type of resources you'd like to appear in this section. It will automatically match with the element type.",
                     "required": 0,
@@ -53,7 +53,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "taxonomy": "Types",
+                    "taxonomy": "type",
                     "field_type": "checkbox",
                     "add_term": 1,
                     "save_terms": 0,
@@ -106,5 +106,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1622831741
+    "modified": 1623087190
 }

@@ -10,8 +10,18 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 1.2em;
 }
 
+.container a {
+	text-decoration: underline;
+	font-weight: 700;
+}
 
 /*home page*/
+
+.entry-header {
+	padding: 50px 120px;
+	background-color: #efefef;
+	font-size: 1.2em;
+}
 
 .btn {
 	margin: 20px

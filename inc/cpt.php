@@ -94,7 +94,7 @@ function create_type_taxonomies()
   );
 
 //registers taxonomy specific post types - default is just post
-  register_taxonomy('Types',array('post', 'resource'), array(
+  register_taxonomy('type',array('post', 'resource'), array(
     'hierarchical' => true,
     'labels' => $labels,
     'show_ui' => true,

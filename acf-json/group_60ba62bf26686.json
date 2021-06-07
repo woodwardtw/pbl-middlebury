@@ -50,7 +50,7 @@
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "Types",
+            "taxonomy": "type",
             "field_type": "checkbox",
             "add_term": 1,
             "save_terms": 1,
@@ -132,5 +132,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1622830004
+    "modified": 1623087074
 }

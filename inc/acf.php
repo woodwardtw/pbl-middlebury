@@ -82,6 +82,76 @@ function pbl_teaching_practices(){
 }
 
 
+/*TOPIC PAGES*/
+
+//pbl_topic_resources()
+
+function pbl_topic_resources_repeater(){
+    global $post;
+    $post_slug = $post->post_name;
+    if(get_term_by('slug', $post_slug, 'Design elements')){
+        $term_type = 'Design elements';
+        $term_id = get_term_by('slug', $post_slug, 'Design elements')->term_id;
+    }
+    if(get_term_by('slug', $post_slug, 'Teaching practices')){
+        $term_type = 'Design practice';
+        $term_id = get_term_by('slug', $post_slug, 'Teaching practices')->term_id;
+    }
+   
+    $html = '';
+    if( have_rows('display_categories') ):
+        // Loop through rows.
+        while( have_rows('display_categories') ) : the_row();
+            $html = '';
+            // Load sub field value.
+            $section_title = get_sub_field('title');
+            $cats = get_sub_field('category');
+            // Do something...
+
+            // WP QUERY LOOP
+             $args = array(
+                  'posts_per_page' => 20,
+                  'post_type'   => 'resource', 
+                  'post_status' => 'publish', 
+                  'nopaging' => false,
+                  'tax_query' => array(
+                      'relation' => 'AND',
+                        array(
+                                'taxonomy' => 'type',
+                                'field'    => 'id',
+                                'terms'    => $cats,
+                            ),                       
+                           array(
+                                    'taxonomy' => $term_type,//get from page title
+                                    'field'    => 'id',
+                                    'terms'    => array($term_id),//get from page title
+                            ),
+                        ),
+                    );
+              $the_query = new WP_Query( $args );
+                    if( $the_query->have_posts() ): 
+                      while ( $the_query->have_posts() ) : $the_query->the_post();
+                       //DO YOUR THING
+                        $title = get_the_title();
+                        $html .= "<div><h3>{$title}</h3></div>";
+                         endwhile;
+                  endif;
+                wp_reset_query();  // Restore global post data stomped by the_post().
+                    
+
+        // End loop.
+        endwhile;
+        return $html;
+        // No value.
+        else :
+            // Do something...
+        endif;
+    }
+
+
+
+
+
 //set icon image to be featured image 
 function acf_set_featured_image( $value, $post_id, $field  ){
     
