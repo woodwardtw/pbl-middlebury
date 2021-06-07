@@ -8,6 +8,30 @@ defined( 'ABSPATH' ) || exit;
 
 //************home page
 
+//buttons
+function pbl_main_links_repeater(){
+    $html = '';
+    if( have_rows('main_links') ):
+
+        // Loop through rows.
+        while( have_rows('main_links') ) : the_row();
+
+            // Load sub field value.
+            $title = get_sub_field('button_title');
+            $link =  get_sub_field('link');
+            // Do something...
+            $html .= "<a class='btn btn-primary' href='{$link}'>{$title}</a>";
+        // End loop.
+        endwhile;
+        return "<div class='d-flex  justify-content-center buttons'>{$html}</div>";
+        // No value.
+        else :
+            // Do something...
+        endif;
+    }
+
+
+//repeater blocks
 function pbl_intro_blocks_repeater(){
     $html = '';
     if( have_rows('intro_blocks') ):
@@ -22,7 +46,7 @@ function pbl_intro_blocks_repeater(){
             $html .= "<div class='intro-block col-md-4'><h2>{$block_title}</h2><div class='intro-description'>{$block_description}</div></div>";
         // End loop.
         endwhile;
-        return "<div class='row d-flex justify-content-between'>{$html}</div>";
+        return "<div class='row blocks-row d-flex justify-content-between'>{$html}</div>";
         // No value.
         else :
             // Do something...
@@ -30,6 +54,32 @@ function pbl_intro_blocks_repeater(){
     }
 
 
+//design and teaching sections
+function pbl_design_elements(){
+    $html = '';
+    $elements = get_field('design_elements');
+    foreach ($elements as $key => $element) {
+        // code...
+        $title = $element->post_title;
+        $link = get_permalink($element->ID);
+        $content = get_the_content('','',$element->ID);
+        $html .= "<h3><a href='{$link}'>{$title}</a></h3><div class='element-content'>{$content}</div>";
+    }
+    return $html;
+}
+
+function pbl_teaching_practices(){
+    $html = '';
+    $elements = get_field('teaching_practices');
+    foreach ($elements as $key => $element) {
+        // code...
+        $title = $element->post_title;
+        $link = get_permalink($element->ID);
+        $content = get_the_content($element->ID);
+        $html .= "<h3><a href='{$link}'>{$title}</a></h3>";
+    }
+    return $html;
+}
 
 
 //set icon image to be featured image 

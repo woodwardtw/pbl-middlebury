@@ -14,11 +14,22 @@ defined( 'ABSPATH' ) || exit;
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<?php the_field('introduction');?>
+		<?php echo pbl_main_links_repeater();?>
 	</header><!-- .entry-header -->
 
 
 	<div class="entry-content">
 		<?php echo pbl_intro_blocks_repeater();?>
+		<div class='row bucks-row'>
+			<div class="col-md-6">
+				<h2>Design Elements</h2>
+			<?php echo pbl_design_elements();?>
+			</div>
+			<div class="col-md-6">
+					<h2>Teaching Practices</h2>
+				<?php echo pbl_teaching_practices();?>
+			</div>
+		</div>
 		<?php //the_content(); ?>
 
 	</div><!-- .entry-content -->
