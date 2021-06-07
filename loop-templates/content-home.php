@@ -16,9 +16,10 @@ defined( 'ABSPATH' ) || exit;
 		<?php the_field('introduction');?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
 
-		<?php the_content(); ?>
+	<div class="entry-content">
+		<?php echo pbl_intro_blocks_repeater();?>
+		<?php //the_content(); ?>
 
 	</div><!-- .entry-content -->
 

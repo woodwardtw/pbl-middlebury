@@ -6,6 +6,31 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+//************home page
+
+function pbl_intro_blocks_repeater(){
+    $html = '';
+    if( have_rows('intro_blocks') ):
+
+        // Loop through rows.
+        while( have_rows('intro_blocks') ) : the_row();
+
+            // Load sub field value.
+            $block_title = get_sub_field('block_title');
+            $block_description = get_sub_field('block_description');
+            // Do something...
+            $html .= "<div class='intro-block col-md-4'><h2>{$block_title}</h2><div class='intro-description'>{$block_description}</div></div>";
+        // End loop.
+        endwhile;
+        return "<div class='row d-flex justify-content-between'>{$html}</div>";
+        // No value.
+        else :
+            // Do something...
+        endif;
+    }
+
+
+
 
 //set icon image to be featured image 
 function acf_set_featured_image( $value, $post_id, $field  ){
