@@ -75,8 +75,8 @@ function pbl_teaching_practices(){
         // code...
         $title = $element->post_title;
         $link = get_permalink($element->ID);
-        $content = get_the_content($element->ID);
-        $html .= "<h3><a href='{$link}'>{$title}</a></h3>";
+        $content = get_the_content('','',$element->ID);
+        $html .= "<h3><a href='{$link}'>{$title}</a></h3><div class='element-content'>{$content}</div>";
     }
     return $html;
 }
