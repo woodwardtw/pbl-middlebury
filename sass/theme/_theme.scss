@@ -19,6 +19,31 @@ h3 {
 	font-weight: 700;
 }
 
+.intro-block {
+	height: 100%;
+}
+
+.intro-description {
+	border: 1px solid $lighter-blue;
+	height: 100%;
+	padding: 30px 0;
+}
+
+.intro-block h2 {
+	color: #fff;
+	background-color: $primary;
+	display: block;
+	width: 100%;
+	padding: 15px 0;
+	font-size: 1.4em;
+	text-align: center;	
+	margin-bottom: 0;
+}
+
+.intro-block p {
+	padding: 5px 30px;
+}
+
 .bucks-row h2 {
 	text-align: center;
 	width: 100%;
@@ -110,4 +135,7 @@ h3 {
 
 .blocks-row, .bucks-row, .topic-resources-row {
 	margin-top: 90px;
-}
+
+
+
+/*MOBILE LAND*/

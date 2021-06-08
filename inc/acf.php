@@ -43,7 +43,7 @@ function pbl_intro_blocks_repeater(){
             $block_title = get_sub_field('block_title');
             $block_description = get_sub_field('block_description');
             // Do something...
-            $html .= "<div class='intro-block col-md-4'><h2>{$block_title}</h2><div class='intro-description'>{$block_description}</div></div>";
+            $html .= "<div class='col-md-4'><div class='intro-block'><h2>{$block_title}</h2><div class='intro-description'>{$block_description}</div></div></div>";
         // End loop.
         endwhile;
         return "<div class='row blocks-row d-flex justify-content-between'>{$html}</div>";
