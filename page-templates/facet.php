@@ -21,13 +21,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row">
 
 			<div class="col-md-3">
-				<h1>SEARCH</h1>
-				<?php 
-					echo '<h3>Types</h3>' . do_shortcode('[facetwp facet="categories"]');
-					echo '<h3>Design</h3>' . do_shortcode('[facetwp facet="design_elements"]');
-					echo '<h3>Teaching</h3>' . do_shortcode('[facetwp facet="teaching"]');
-
-				?>
+				<div class='facet-box'>
+					<h3>Types</h3>
+					<?php echo facetwp_display( 'facet', 'categories');?>
+				</div>	
+				<div class='facet-box'>
+					<h3>Design Elements</h3>
+					<?php echo facetwp_display( 'facet', 'design_elements');?>
+				</div>
+				<div class='facet-box'>
+					<h3>Teaching Practices</h3>
+					<?php echo facetwp_display( 'facet', 'teaching');?>
+				</div>				
 			</div>
 
 			<div class="col-md-9 content-area" id="primary">

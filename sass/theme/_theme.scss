@@ -269,6 +269,45 @@ h3 {
 }
 
 
+/*facets*/
+.facet-box {
+	background-color: #fff;
+	border: 1px solid $lighter-blue;
+	margin-bottom: 20px;
+	padding: 20px 0 0 20px;
+}
+
+.facet-row .col-md-6 {
+	margin-bottom: 20px;
+}
+
+.facet-item {
+	background-color: #fff;
+	border: 1px solid $lighter-blue;
+	height: 100%;
+	padding: 20px 10px;
+	box-shadow: 8px 8px 0px $primary;
+}
+
+.facet-title {
+	font-size: 1.2em;
+}
+
+.facetwp-counter {
+	display: none;
+}
+
+.facetwp-checkbox {
+	line-height: 1.1em;
+	margin: 10px 0;
+	padding: 5px 2px;
+	transition: all .3s;
+}
+
+.facetwp-checkbox:hover {
+	background-color: $lighter-blue;
+}
+
 @media (max-width: 768px) { 
 	.intro-flex {
 		display: block;
