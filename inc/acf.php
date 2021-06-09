@@ -8,6 +8,23 @@ defined( 'ABSPATH' ) || exit;
 
 //************home page
 
+function pbl_entry_block(){
+    $img = get_template_directory_uri() . '/imgs/project.svg';
+    $title = get_the_title();
+    $intro = get_field('introduction');
+    $buttons = pbl_main_links_repeater();
+    return "<div class='intro-flex'>
+                <div class='intro-img'>
+                    <img class='home-main-img' src='{$img}'  alt='Two hands around a lightbulb indicating a project.''>
+                </div>
+                <div class='intro-text'>
+                    <h1 class='entry-title'>{$title}</h1>
+                    {$intro}
+                    {$buttons}
+                </div>
+            </div>";
+}
+
 //buttons
 function pbl_main_links_repeater(){
     $html = '';
@@ -112,7 +129,7 @@ function pbl_topic_resources_repeater(){
             // Do something...
             $count = count(get_field("display_categories"));
             $div_class = bs_div_maker($count);
-            $html .= "<div class='{$div_class}'><h2>{$section_title}</h2>";
+            $html .= "<div class='{$div_class}'><div class='topic-block'><h2>{$section_title}</h2>";
             // WP QUERY LOOP
              $args = array(
                   'posts_per_page' => 15,
@@ -141,12 +158,12 @@ function pbl_topic_resources_repeater(){
                         $title = get_the_title();
                         $link = get_field('link', $id);
                         $description = get_field('description', $id);
-                        $html .= "<div><h3><a href='{$link}'>{$title}</a></h3>{$description}</div>";
+                        $html .= "<div class='topic-content'><h3><a href='{$link}'>{$title}</a></h3>{$description}</div>";
                          endwhile;
                   endif;
                 wp_reset_query();  // Restore global post data stomped by the_post().
                     
-                $html .= '</div>';
+                $html .= '</div></div>';
         // End loop.
         endwhile;
         return $html;
