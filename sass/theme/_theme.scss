@@ -249,7 +249,23 @@ h3 {
 }
 
 .topic-content {
-	padding: 10px 30px;
+	padding: 15px 30px 10px 30px;
+	position: relative;
+}
+
+.topic-content:after {
+  content: '';
+  width: 80%;
+  height: 4px;
+  border-bottom: 1px solid $lighter-blue;
+  position: absolute;
+  bottom: -4px;
+  margin: 0 5%;
+  display: block;
+}
+
+.topic-content h3 {
+	margin-top: 20px;
 }
 
 
