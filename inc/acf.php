@@ -37,7 +37,7 @@ function pbl_main_links_repeater(){
             $title = get_sub_field('button_title');
             $link =  get_sub_field('link');
             // Do something...
-            $html .= "<a class='btn btn-primary' href='{$link}'>{$title}</a>";
+            $html .= "<a class='btn btn-primary btn-pbl' href='{$link}'>{$title}</a>";
         // End loop.
         endwhile;
         return "<div class='d-flex  justify-content-center buttons'>{$html}</div>";

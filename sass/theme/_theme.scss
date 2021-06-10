@@ -28,7 +28,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'Domine', serif;
 }
 
-
 h3 {
 	font-size: 1.2em;
 }
@@ -40,7 +39,8 @@ h3 {
 }
 
 #main-nav a:hover {
-	text-decoration: underline;
+	background-color: $teal;
+	color: $primary;
 }
 
 .navbar-brand {
@@ -50,12 +50,41 @@ h3 {
 
 .container a {
 	text-decoration: underline;
-	font-weight: 700;
+	font-weight: 700;	
 }
 
-a.btn  {
-	text-decoration: none;
+.container a:hover {
+	text-decoration-color: $teal;
 }
+
+.container a.btn-pbl  {
+	text-decoration: none;
+	display: inline-block;
+	overflow: hidden;
+	width: 180px;
+	height: 40px;
+	box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+  border-color: $primary;
+  color: #fff;
+  background-image: -webkit-linear-gradient(45deg, $teal 50%, transparent 50%);
+  background-image: linear-gradient(45deg, $teal 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 400ms ease-in-out;
+  text-align: center;
+}
+
+.container a.btn-pbl:hover {
+  background-position: 0;
+  border-color: $teal;
+  color: $primary;
+}
+
 
 .intro-block{
 	height: 100%;
@@ -96,6 +125,7 @@ a.btn  {
 	margin: 30px 0px;
 	background-color: #f2f2f2;
 	padding: 40px 10px;
+	border-top: 4px solid $teal;
 }
 
 .home-element {
@@ -190,6 +220,7 @@ a.btn  {
     margin: 0 40px 0 0;
     flex: 1;
     object-fit: contain;
+    border: 3px solid $teal;
 }
 
 .intro-text {
@@ -209,22 +240,10 @@ a.btn  {
 
 .entry-title{
   display: inline-block;
+  border-bottom: 2px solid $teal;
+  width: 100%;
 }
 
-
-// .entry-title:after{
-//   content:"";
-//   background-color:#FDD16D;
-//   width:80%;
-//   height:1em;
-//   position:absolute;
-//   z-index: 1;
-//   filter:url(#marker-shape);
-//   left:40px;
-//   // top:0.1em;
-//   padding:0 0.25em;
-//   opacity: 75%;
-// }
 
 .btn {
 	margin: 20px
@@ -332,6 +351,10 @@ a.btn  {
 	margin-bottom: 20px;
 	line-height: 1.2em;
 	display: block;
+}
+
+.facet-body p {
+	line-height: 1.3em;
 }
 
 .facetwp-counter {
