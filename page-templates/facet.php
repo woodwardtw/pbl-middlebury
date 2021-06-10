@@ -21,6 +21,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row">
 
 			<div class="col-md-3">
+				<?php echo facetwp_display( 'facet', 'search');?>
+				<div class='facet-box'>
+					<h2>Discipline</h2>
+					<div class='facet-select'>
+						<?php echo facetwp_display( 'facet', 'disciplines');?>
+					</div>
+				</div>
 				<div class='facet-box'>
 					<h2>Types</h2>
 					<div class='facet-select'>

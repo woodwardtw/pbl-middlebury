@@ -53,6 +53,10 @@ h3 {
 	font-weight: 700;
 }
 
+a.btn  {
+	text-decoration: none;
+}
+
 .intro-block{
 	height: 100%;
 	background-color: #fff;
@@ -248,9 +252,18 @@ h3 {
 	margin-bottom: 0;
 }
 
+.topic-box {
+	border-left: 1px solid $lighter-blue;
+	border-right: 1px solid $lighter-blue;
+	border-bottom: 1px solid $lighter-blue;
+	padding: 20px 30px;
+	height: 100%;
+	background-color: #fff;
+}
+
 .topic-content {
-	padding: 15px 30px 10px 30px;
-	position: relative;
+	padding: 15px 0 10px 0;
+	position: relative;	
 }
 
 .topic-content:after {
@@ -264,6 +277,10 @@ h3 {
   display: block;
 }
 
+.topic-resources-row .topic-content:nth-last-of-type(1):after{
+	border-bottom: 0;
+}
+
 .topic-content h3 {
 	margin-top: 20px;
 }
@@ -272,9 +289,15 @@ h3 {
 /*facets*/
 .facet-select {
 	background-color: #fff;
-	border: 1px solid $lighter-blue;
+	border-left: 1px solid $lighter-blue;
+	border-right: 1px solid $lighter-blue;
+	border-bottom: 1px solid $lighter-blue;
 	margin-bottom: 10px;
 	padding: 10px 0 0 0;
+}
+
+.facet-box {
+	margin-bottom: 20px;
 }
 
 .facet-box h2 {
@@ -296,6 +319,12 @@ h3 {
 	height: 100%;
 	padding: 20px 30px;
 	box-shadow: 8px 8px 0px $primary;
+	transition: all .4s;
+}
+
+.facet-item:hover {
+	border: 1px solid $teal;
+	box-shadow: 8px 8px 0px $teal;
 }
 
 .facet-title {
@@ -317,7 +346,26 @@ h3 {
 }
 
 .facetwp-checkbox:hover {
-	background-color: $lighter-blue;
+	background-color: $teal;
+}
+
+
+.facetwp-facet-search{
+	width: 100%;
+}
+
+.facetwp-facet input.facetwp-search, .facetwp-facet input.facetwp-location{
+	width: 100%;
+	padding-right: 0;
+}
+
+.facetwp-input-wrap {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-right: 0;
+    margin-right: 0;
+    margin-top: 7px;
 }
 
 @media (max-width: 768px) { 

@@ -129,7 +129,7 @@ function pbl_topic_resources_repeater(){
             // Do something...
             $count = count(get_field("display_categories"));
             $div_class = bs_div_maker($count);
-            $html .= "<div class='{$div_class}'><div class='topic-block'><h2>{$section_title}</h2>";
+            $html .= "<div class='{$div_class}'><div class='topic-block'><h2>{$section_title}</h2><div class='topic-box'>";
             // WP QUERY LOOP
              $args = array(
                   'posts_per_page' => 15,
@@ -160,16 +160,19 @@ function pbl_topic_resources_repeater(){
                         $description = get_field('description', $id);
                         $html .= "<div class='topic-content'><h3><a href='{$link}'>{$title}</a></h3>{$description}</div>";
                          endwhile;
+                    else: 
+                        $html .= "<div class='topic-content'>No results meet this criteria. Sorry.</div>";
                   endif;
                 wp_reset_query();  // Restore global post data stomped by the_post().
                     
-                $html .= '</div></div>';
+                $html .= '</div></div></div>';
         // End loop.
         endwhile;
         return $html;
         // No value.
         else :
             // Do something...
+            return "<div class='topic-content'>No results meet this criteria. Sorry.</div>";
         endif;
     }
 
