@@ -391,6 +391,19 @@ h3 {
     margin-top: 7px;
 }
 
+
+/*ACF FORM*/
+
+.acf-form {
+	background-color: #fff;
+	padding: 50px;
+	border: 1px solid $lighter-blue;
+}
+
+.cf-checkbox-list {
+	height: 100%;
+}
+
 @media (max-width: 768px) { 
 	.intro-flex {
 		display: block;
