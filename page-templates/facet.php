@@ -22,16 +22,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="col-md-3">
 				<div class='facet-box'>
-					<h3>Types</h3>
-					<?php echo facetwp_display( 'facet', 'categories');?>
+					<h2>Types</h2>
+					<div class='facet-select'>
+						<?php echo facetwp_display( 'facet', 'categories');?>
+					</div>
 				</div>	
 				<div class='facet-box'>
-					<h3>Design Elements</h3>
-					<?php echo facetwp_display( 'facet', 'design_elements');?>
+					<h2>Design Elements</h2>
+					<div class='facet-select'>
+						<?php echo facetwp_display( 'facet', 'design_elements');?>
+					</div>
 				</div>
 				<div class='facet-box'>
-					<h3>Teaching Practices</h3>
-					<?php echo facetwp_display( 'facet', 'teaching');?>
+					<h2>Teaching Practices</h2>
+					<div class='facet-select'>					
+						<?php echo facetwp_display( 'facet', 'teaching');?>
+					</div>
 				</div>				
 			</div>
 
