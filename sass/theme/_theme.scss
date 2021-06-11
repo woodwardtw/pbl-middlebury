@@ -404,6 +404,11 @@ h3 {
 	height: 100%;
 }
 
+#resource-submission label {
+	font-size: 1.3em;
+	color: $primary;
+}
+
 @media (max-width: 768px) { 
 	.intro-flex {
 		display: block;
