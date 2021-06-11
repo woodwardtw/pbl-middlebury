@@ -409,6 +409,23 @@ h3 {
 	color: $primary;
 }
 
+#message.updated {
+	z-index: 3;
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: $teal;
+}
+
+#message.updated p {
+	font-size: 2em;
+	text-align: center;
+	margin: 50vh auto;
+	display: block;
+}
+
 @media (max-width: 768px) { 
 	.intro-flex {
 		display: block;
