@@ -32,6 +32,13 @@ h3 {
 	font-size: 1.2em;
 }
 
+.entry-content {
+	margin: 50px 0;
+	border: 1px solid $lighter-blue;
+	padding: 40px 30px;
+	background-color: #fff;
+}
+
 #main-nav a {
 	text-decoration: none;
 	color: #fff;
@@ -445,4 +452,3 @@ h3 {
 	}
 
 }
-
