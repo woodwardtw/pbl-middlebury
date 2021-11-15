@@ -111,10 +111,23 @@ function pbl_topic_resources_repeater(){
     if(get_term_by('slug', $post_slug, 'Design elements')){
         $term_type = 'Design elements';
         $term_id = get_term_by('slug', $post_slug, 'Design elements')->term_id;
+        $extra = array(
+                    'taxonomy' => $term_type,//get from page title
+                    'field'    => 'id',
+                    'terms'    => array($term_id),//get from page title
+            );
     }
     if(get_term_by('slug', $post_slug, 'Teaching practices')){
         $term_type = 'Teaching practices';
         $term_id = get_term_by('slug', $post_slug, 'Teaching practices')->term_id;
+        $extra = array(
+                    'taxonomy' => $term_type,//get from page title
+                    'field'    => 'id',
+                    'terms'    => array($term_id),//get from page title
+            );
+    } 
+    else {
+        $extra = '';
     }
    
     $html = '';
@@ -143,11 +156,7 @@ function pbl_topic_resources_repeater(){
                                 'field'    => 'id',
                                 'terms'    => $cats,
                             ),                       
-                           array(
-                                    'taxonomy' => $term_type,//get from page title
-                                    'field'    => 'id',
-                                    'terms'    => array($term_id),//get from page title
-                            ),
+                          $extra,
                         ),
                     );
               $the_query = new WP_Query( $args );
