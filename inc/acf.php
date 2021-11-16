@@ -15,7 +15,7 @@ function pbl_entry_block(){
     $buttons = pbl_main_links_repeater();
     return "<div class='intro-flex'>
                 <div class='intro-img'>
-                    <img class='home-main-img' src='{$img}'  alt='Two hands around a lightbulb indicating a project.''>
+                    <img class='home-main-img' src='{$img}'  alt='Two hands around a light bulb indicating a project.''>
                 </div>
                 <div class='intro-text'>
                     <h1 class='entry-title'>{$title}</h1>
@@ -129,7 +129,7 @@ function pbl_topic_resources_repeater(){
     else {
         $extra = '';
     }
-   
+   // var_dump($extra);
     $html = '';
     if( have_rows('display_categories') ):
         // Loop through rows.
