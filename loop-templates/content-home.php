@@ -22,13 +22,13 @@ defined( 'ABSPATH' ) || exit;
 	<div class="entry-content">
 		<?php echo pbl_intro_blocks_repeater();?>
 		<div class='row bucks-row'>
-			<div class="col-md-6">
+			<div class="col-md-6" id="design-elements">
 				<div class="element-column design">
 					<h2>Design Elements</h2>
 					<?php echo pbl_design_elements();?>
 				</div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6" id="teaching-practices">
 					<div class="element-column teaching">
 						<h2>Teaching Practices</h2>
 						<?php echo pbl_teaching_practices();?>
