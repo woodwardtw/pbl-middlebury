@@ -29,6 +29,10 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php the_content(); ?>
 
+		<?php the_field('description', $id);?>
+
+		<a href="<?php echo pbl_pick_resource_link();?>">See the resource</a>
+		
 		<?php
 		wp_link_pages(
 			array(

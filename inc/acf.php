@@ -165,7 +165,7 @@ function pbl_topic_resources_repeater(){
                        //DO YOUR THING
                         $id = get_the_id();
                         $title = get_the_title();
-                        $link = get_field('link', $id);
+                        $link = pbl_pick_resource_link();//get_field('link', $id);
                         $description = get_field('description', $id);
                         $html .= "<div class='topic-content'><h3><a href='{$link}'>{$title}</a></h3>{$description}</div>";
                          endwhile;
@@ -197,7 +197,17 @@ function bs_div_maker($count){
     }
 }
 
+//get link or document link 
 
+function pbl_pick_resource_link(){
+    global $post;
+    $id = $post->ID;
+    if(get_field('link', $id)){
+        return get_field('link', $id);
+    } else {
+        return get_field('upload_file', $id);
+    }
+}
 
 //set icon image to be featured image 
 function acf_set_featured_image( $value, $post_id, $field  ){
