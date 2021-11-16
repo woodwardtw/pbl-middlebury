@@ -17,11 +17,13 @@ defined( 'ABSPATH' ) || exit;
 	</header><!-- .entry-header -->
 
 	<?php //echo get_the_post_thumbnail( $post->ID, 'full' ); ?>
+	
+	<div class="row topic-resources-row">
+			<?php echo pbl_topic_resources_repeater();?>
+	</div>
 
 	<div class="entry-content">
-		<div class="row topic-resources-row">
-			<?php echo pbl_topic_resources_repeater();?>
-		</div>
+		
 		<?php
 		wp_link_pages(
 			array(
