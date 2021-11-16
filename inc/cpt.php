@@ -97,7 +97,8 @@ function create_type_taxonomies()
   register_taxonomy('type',array('post', 'resource'), array(
     'hierarchical' => true,
     'labels' => $labels,
-    'show_ui' => false,
+    'show_ui' => true,
+    'meta_box_cb'  => false,
     'update_count_callback' => '_update_post_term_count',
     'query_var' => true,
     'rewrite' => array( 'slug' => 'type' ),
@@ -133,7 +134,8 @@ function create_design_element_taxonomies()
   register_taxonomy('Design elements',array('post', 'resource'), array(
     'hierarchical' => true,
     'labels' => $labels,
-    'show_ui' => false,
+    'show_ui' => true,
+    'meta_box_cb' => false,
     'update_count_callback' => '_update_post_term_count',
     'query_var' => true,
     'rewrite' => array( 'slug' => 'design_element' ),
@@ -169,7 +171,8 @@ function create_teaching_practice_taxonomies()
   register_taxonomy('Teaching practices',array('post', 'resource'), array(
     'hierarchical' => true,
     'labels' => $labels,
-    'show_ui' => false,
+    'show_ui' => true,
+    'meta_box_cb' => false,
     'update_count_callback' => '_update_post_term_count',
     'query_var' => true,
     'rewrite' => array( 'slug' => 'teaching_practice' ),
@@ -205,7 +208,8 @@ function create_discipline_taxonomies()
   register_taxonomy('disciplines',array('post'), array(
     'hierarchical' => true,
     'labels' => $labels,
-    'show_ui' => false,
+    'show_ui' => true,
+    'meta_box_cb' => false,
     'update_count_callback' => '_update_post_term_count',
     'query_var' => true,
     'rewrite' => array( 'slug' => 'discipline' ),
