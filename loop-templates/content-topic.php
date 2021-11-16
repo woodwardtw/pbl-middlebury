@@ -22,18 +22,7 @@ defined( 'ABSPATH' ) || exit;
 			<?php echo pbl_topic_resources_repeater();?>
 	</div>
 
-	<div class="entry-content">
-		
-		<?php
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-
-	</div><!-- .entry-content -->
+	
 
 	<footer class="entry-footer">
 

@@ -17640,13 +17640,21 @@ h3 {
 }
 
 .blocks-row, .bucks-row, .topic-resources-row {
-  margin-top: 90px;
+  margin: 90px 0;
 }
 
 /*topic page*/
 .topic-block {
   background-color: #fff;
   height: 100%;
+}
+
+.topic-block:nth-child(2) {
+  margin-left: 10px;
+}
+
+.topic-block:nth-child(1) {
+  margin-right: 10px;
 }
 
 .topic-block h2 {
@@ -17687,6 +17695,11 @@ h3 {
 
 .topic-resources-row .topic-content:nth-last-of-type(1):after {
   border-bottom: 0;
+}
+
+.topic-resources-row .col-md-12, .topic-resources-row .col-md-6, .topic-resources-row .col-md-4 {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .topic-content h3 {

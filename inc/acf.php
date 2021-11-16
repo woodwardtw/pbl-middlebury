@@ -129,7 +129,7 @@ function pbl_topic_resources_repeater(){
     else {
         $extra = '';
     }
-   // var_dump($extra);
+    var_dump($extra);
     $html = '';
     if( have_rows('display_categories') ):
         // Loop through rows.
