@@ -117,7 +117,7 @@ function pbl_topic_resources_repeater(){
                     'terms'    => array($term_id),//get from page title
             );
     }
-    if(get_term_by('slug', $post_slug, 'Teaching practices')){
+    else if(get_term_by('slug', $post_slug, 'Teaching practices')){
         $term_type = 'Teaching practices';
         $term_id = get_term_by('slug', $post_slug, 'Teaching practices')->term_id;
         $extra = array(
@@ -129,7 +129,6 @@ function pbl_topic_resources_repeater(){
     else {
         $extra = '';
     }
-    var_dump($extra);
     $html = '';
     if( have_rows('display_categories') ):
         // Loop through rows.
