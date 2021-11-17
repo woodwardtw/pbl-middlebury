@@ -17509,7 +17509,7 @@ h3 {
 .home-element {
   margin-bottom: 10px;
   padding: 20px 10px 10px 110px;
-  min-height: 170px;
+  height: 200px;
   background-size: 70px 70px;
   background-position: 10px 20px;
   background-repeat: no-repeat;
