@@ -19,7 +19,6 @@ defined( 'ABSPATH' ) || exit;
 	</header><!-- .entry-header -->
 
 
-	<div class="entry-content">
 		<?php echo pbl_intro_blocks_repeater();?>
 		<div class='row bucks-row'>
 			<div class="col-md-6" id="design-elements">
@@ -37,7 +36,6 @@ defined( 'ABSPATH' ) || exit;
 		</div>
 		<?php //the_content(); ?>
 
-	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
 
