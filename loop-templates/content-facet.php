@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="facet-header">
+	<header class="entry-header">
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
@@ -21,20 +21,12 @@ defined( 'ABSPATH' ) || exit;
 
 	<div class="entry-content">
 
-		<?php the_content(); ?>
-			<?php echo facetwp_display( 'template', 'workshop_display' );?>
-			<?php echo do_shortcode('[facetwp pager="true"]') ;?>
-			<button class="btn btn-alp btn-dark" value="Reset" onclick="FWP.reset()" class="facet-reset" />Reset Filters</button>
-		<?php
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
+		<?php the_content(); ?>					
 
 	</div><!-- .entry-content -->
+	<?php echo facetwp_display( 'template', 'blog_posts' );?>
+	<?php echo do_shortcode('[facetwp pager="true"]') ;?>
+	<button class="btn btn-alp btn-dark" value="Reset" onclick="FWP.reset()" class="facet-reset" />Reset Filters</button>
 
 	<footer class="entry-footer">
 
