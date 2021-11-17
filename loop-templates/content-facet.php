@@ -19,11 +19,11 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 
-	<div class="entry-content">
+	<!-- <div class="entry-content">
 
-		<?php the_content(); ?>					
+		<?php //the_content(); ?>					
 
-	</div><!-- .entry-content -->
+	</div -->><!-- .entry-content -->
 	<?php echo facetwp_display( 'template', 'blog_posts' );?>
 	<?php echo do_shortcode('[facetwp pager="true"]') ;?>
 	<button class="btn btn-alp btn-dark" value="Reset" onclick="FWP.reset()" class="facet-reset" />Reset Filters</button>
