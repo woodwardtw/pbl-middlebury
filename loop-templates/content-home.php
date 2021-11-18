@@ -20,6 +20,30 @@ defined( 'ABSPATH' ) || exit;
 
 
 		<?php echo pbl_intro_blocks_repeater();?>
+		<div class="row blocks-row d-flex justify-content-between">
+			<div class="col-md-4">
+				<div class="intro-block">
+					<h2>Learn Along with Us!</h2>
+					<div class="intro-description">
+						<p>We will be posting new content on our blog as we continue our PBL journey. We invite you to join us as we learn and grow. You can see our most recent posts here or <a href='?post_type=post'>explore our archive</a>.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="intro-block updates">
+					<h2>PBL Updates</h2>
+					<div class="intro-description">
+						<ul>
+							<?php pbl_homepage_news_posts();?>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				
+			</div>
+		</div>
+
 		<div class='row bucks-row'>
 			<div class="col-md-6" id="design-elements">
 				<div class="element-column design">
@@ -33,6 +57,7 @@ defined( 'ABSPATH' ) || exit;
 						<?php echo pbl_teaching_practices();?>
 					</div>
 			</div>
+
 		</div>
 		<?php //the_content(); ?>
 

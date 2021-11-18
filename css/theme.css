@@ -17839,6 +17839,18 @@ h3 {
   height: 350px;
 }
 
+#searchsubmit {
+  margin: 0;
+}
+
+#searchform {
+  margin: 0 0 20px 0;
+}
+
+.updates .understrap-read-more-link {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .intro-flex {
     display: block;

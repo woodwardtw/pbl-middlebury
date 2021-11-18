@@ -219,6 +219,32 @@ function acf_set_featured_image( $value, $post_id, $field  ){
     return $value;
 }
 
+
+//home page news posts
+
+function pbl_homepage_news_posts(){
+    $args = array(
+        'post_type' => array('post'),
+        'post_status' => array('publish'),
+        'posts_per_page' => 3,
+    );
+    $the_query = new WP_Query( $args );
+
+    // The Loop
+    if ( $the_query->have_posts() ) :
+    while ( $the_query->have_posts() ) : $the_query->the_post();
+      // Do Stuff
+        $title = get_the_title();
+        $link = get_the_permalink();
+        $excerpt = get_the_excerpt();
+        echo "<li><a href='{$link}'>{$title}</a> <div>{$excerpt}</div> </li>";
+    endwhile;
+    endif;
+
+    // Reset Post Data
+    wp_reset_postdata();
+}
+
 // acf/update_value/name={$field_name} - filter for a specific field based on it's name
 add_filter('acf/update_value/name=icon', 'acf_set_featured_image', 10, 3);
 
